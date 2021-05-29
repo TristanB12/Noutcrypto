@@ -9,14 +9,18 @@
                     <li>Dashboard</li>
                 </ul>
             </nav>
-            <button class="main-btn">CONNEXION</button>
+            <button class="main-btn" @click="goToAuth">CONNEXION</button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+        methods: {
+            goToAuth() {
+                this.$router.push({name: 'Auth'})
+            }
+        },
     }
 </script>
 

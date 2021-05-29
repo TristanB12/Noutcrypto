@@ -7,12 +7,12 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
                     <button class="main-btn">VOIR PLUS</button>
                 </div>
-                <img src="@/assets/CarteDodoCoin.png" alt="">
+                <img src="@/assets/DodoCoinLandingPage.png" alt="">
             </div>
         </div>
         <div class="secondary-content-wrapper">
             <div class="secondary-content">
-                <img src="@/assets/CryptoIllustration.jpg" alt="">
+                <img src="@/assets/PresentationCryptoLangingPage.png" alt="">
                 <div class="content">
                     <h3>QUOI</h3>
                     <h2>Qu'est ce que la cryptomonnaie</h2>
@@ -29,7 +29,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
                     <button class="main-btn">VOIR PLUS</button>
                 </div>
-                <img src="@/assets/CryptoIllustration.jpg" alt="">
+                <img src="@/assets/PresentationCryptoLangingPage.png" alt="">
             </div>
         </div>
     </div>

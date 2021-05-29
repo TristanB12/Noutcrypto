@@ -135,4 +135,9 @@ button {
 	letter-spacing: 1px;
 }
 
+@media screen and (max-width: 768px){
+.farm h2 {
+        font-size: 1em;
+    }
+}
 </style>

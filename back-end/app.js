@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 const userRoutes = require('./routes/user')
 const farmRoutes = require('./routes/cryptoFarm')
 
-app.use('/api/auth', userRoutes);
+app.use('/api/auth', userRoutes)
 app.use('/api/farm', farmRoutes)
 
 module.exports = app;

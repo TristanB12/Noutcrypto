@@ -28,6 +28,7 @@
 #headerBar {
     width: 100%;
     position: fixed;
+    background-color: #5688ff;
     left: 0;
     top: 0;
 }

@@ -4,18 +4,20 @@
             <div class="form-container sign-up-container">
                 <form action="#">
                     <h1>Créer un compte</h1>
-                    <input type="text" placeholder="Nom" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Mot de passe" />
-                    <button>Créer</button>
+                    <input type="text" placeholder="Nom" v-model="sign_name_input" />
+                    <input type="email" placeholder="Email"  v-model="sign_email_input"/>
+                    <input type="password" placeholder="Mot de passe" v-model="sign_password_input" />
+                    <span v-if="sign_error != ''"> {{ sign_error }} </span>
+                    <button @click="signUp">Créer</button>
                 </form>
             </div>
             <div class="form-container sign-in-container">
                 <form action="#">
                     <h1>Se connecter</h1>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Mot de passe" />
-                    <button>Connexion</button>
+                    <input type="email" placeholder="Email" v-model="login_email_input"/>
+                    <input type="password" placeholder="Mot de passe" v-model="login_password_input"/>
+                    <span v-if="login_error != ''"> {{ login_error }} </span>
+                    <button @click="login">Connexion</button>
                 </form>
             </div>
             <div class="overlay-container">
@@ -38,16 +40,52 @@
 </template>
 
 <script>
+import axios from 'axios'
     export default {
+        data() {
+            return {
+                sign_name_input:"",
+                sign_email_input: "",
+                sign_password_input: "",
+                login_email_input: "",
+                login_password_input: "",
+                sign_error: "",
+                login_error: ""
+            }
+        },
         methods: {
+            login() {
+                axios.post('http://localhost:8081/api/auth/login', {
+                        email: this.login_email_input,
+                        password: this.login_password_input
+                    })
+                    .then(response => {
+                        this.$store.dispatch('setUser', response.data.user)
+                        this.$router.push("test")
+                    })
+                    .catch(error => this.login_error = error.response.data.error)
+                this.login_email_input = ""
+                this.login_password_input = ""
+            },
+            signUp() {
+                axios.post('http://localhost:8081/api/auth/signup', {
+                        name: this.sign_name_input,
+                        email: this.sign_email_input,
+                        password: this.sign_password_input
+                    })
+                    .then(response => {
+                        this.$store.dispatch('setUser', response.data.user)
+                    })
+                    .catch(error => this.sign_error = error.response.data.error)
+                this.sign_email_input = ""
+                this.sign_password_input = ""
+                this.sign_name_input = ""
+            },
             animations() {
                 const signUpButton = document.getElementById('signUp');
                 const signInButton = document.getElementById('signIn');
                 const container = document.getElementById('container');
 
-                console.log(signUpButton)
-                console.log(signInButton)
-                console.log(container)
                 signUpButton.addEventListener('click', () => {
                     container.classList.add("right-panel-active");
                 });

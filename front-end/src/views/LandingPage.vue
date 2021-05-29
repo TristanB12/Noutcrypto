@@ -7,7 +7,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
                     <button class="main-btn">VOIR PLUS</button>
                 </div>
-                <img src="@/assets/DodoCoinLandingPage.png" alt="">
+                <img src="@/assets/Image1LandingPage.png" alt="">
             </div>
         </div>
         <div class="secondary-content-wrapper">
@@ -29,7 +29,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
                     <button class="main-btn">VOIR PLUS</button>
                 </div>
-                <img src="@/assets/PresentationCryptoLangingPage.png" alt="">
+                <img src="@/assets/Image3LandingPage.png" alt="">
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@
     }
     img {
         width: 100%;
-        max-width: 700px;
+        max-width: 900px;
         height: auto;
     }
 }

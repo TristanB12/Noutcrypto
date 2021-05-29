@@ -24,6 +24,7 @@
         methods: {
             goToAuth() {
                 this.$router.push({name: 'Auth'})
+                this.disableNavigation()
             },
             activeNavigation() {
                 const nav = document.querySelector('.nav-links')
@@ -50,7 +51,7 @@
     background-color: #5688ff;
     left: 0;
     top: 0;
-    z-index: 4;
+    z-index: 1000;
 }
 .header-bar-wrapper {
     height: 10vh;

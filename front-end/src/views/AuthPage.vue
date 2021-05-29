@@ -2,7 +2,7 @@
     <div id="login">
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="#">
+                <form action="">
                     <h1>Créer un compte</h1>
                     <input type="text" placeholder="Nom" v-model="sign_name_input" />
                     <input type="email" placeholder="Email"  v-model="sign_email_input"/>
@@ -12,7 +12,7 @@
                 </form>
             </div>
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form action="">
                     <h1>Se connecter</h1>
                     <input type="email" placeholder="Email" v-model="login_email_input"/>
                     <input type="password" placeholder="Mot de passe" v-model="login_password_input"/>
@@ -113,17 +113,6 @@ import axios from 'axios'
 
 * {
 	box-sizing: border-box;
-}
-
-body {
-	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
 }
 
 h1 {
@@ -322,4 +311,22 @@ input {
 	transform: translateX(20%);
 }
 
+@media screen and (max-width: 768px){
+	h1 {
+		font-size: 1.5em;
+	}
+	.container {
+		min-height: 375px;
+	}
+	button {
+		font-size: .5em;
+		padding: 10px 10px;
+	}
+	form {
+		padding: 0 20px;
+	}
+	input {
+		padding: 5px 5px;
+	}
+}
 </style>

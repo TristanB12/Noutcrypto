@@ -27,7 +27,10 @@
                 <div class="content">
                     <h3>POURQUOI</h3>
                     <h2>Pourquoi financer un projet de ferme de minage a la Réunion ? </h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
+                    <p>En Finançant la construction de ferme de minage, vous permettez à l'économie réunionnaise de grandir. La Réunion possède aujourd'hui également sa cryptomonnais qui se nomme le "Dodo Coin", elle vaut aux alentours de 1,30$ (varie selon le cours).</p>
+                    <p>La crise sanitaire fait chuter toute les plus grandes monnaies du monde. Seuls le dollar américain persiste mais risque fortement de s'éteindre, d'où l'intérêt d'implanter des fermes de minage à la Réunion pour produire du DodoCoin et concurrencer les autres cryptomonnais du monde tout en développement l'économie Réunionnaise.</p>
+
+                    <p>En finançant un projet, une fois celui-ci terminé les premiers DodoCoin engendrés par la fermes vous seront reversé selon l'importance de votre donnation. Vous ne pouvez pas financer un projet au dela de 10% de l'objectif.</p>
                 </div>
                 <img src="@/assets/Image3LandingPage.png" alt="">
             </div>
@@ -155,7 +158,7 @@ p {
     align-items: center;
 
     .content {
-        width: 40%;
+        width: 50%;
         h3 {
             letter-spacing: 1em;
             color: #9f53e6;
@@ -165,7 +168,7 @@ p {
             margin-bottom: 50px;
         }
         p {
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
         button {
             padding: 13px 30px;

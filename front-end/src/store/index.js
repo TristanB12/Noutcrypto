@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     token: null,
     user: null,
-    isUserLoggedIn: false
+    isUserLoggedIn: false,
+    popupDone: false
   },
   mutations: {
     setToken(state, token) {
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     setUser(state, user) {
       state.user = user;
+    },
+    setPopup(state, popup) {
+      state.popupDone = popup
     }
   },
   actions: {
@@ -27,6 +31,9 @@ export default new Vuex.Store({
     },
     setUser({commit}, user) {
       commit('setUser', user)
+    },
+    setPopup({commit}, popup) {
+      commit('setPopup', popup)
     }
   },
   modules: {

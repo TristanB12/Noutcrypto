@@ -1,5 +1,5 @@
 <template>
-    <div class="farm-container">
+    <div :id="data.imagePath" class="farm-container">
         <div class="farm">
             <div class="farm-preview">
                 <img :src="require('@/assets/' + data.imagePath)" alt="">
@@ -10,10 +10,10 @@
                 <div class="progress-container">
                     <div class="progress"><span class="funding" :id="data._id"></span></div>
                     <span class="progress-text">
-                        {{ data.funding }} / {{ data.fundingGoal }}
+                        {{ data.funding }} / {{ data.fundingGoal }}$
                     </span>
                 </div>
-                <button class="main-btn">Détails</button>
+                <router-link :to="{name: 'FarmDetails', params: {data: data}}"><button class="main-btn">Détails</button></router-link>
             </div>
         </div>
     </div>
@@ -36,7 +36,6 @@
             }
         },
         mounted () {
-            console.log(this.data)
             this.initFundingBar();
         },
     }

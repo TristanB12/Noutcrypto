@@ -1,15 +1,20 @@
 <template>
     <div id="headerBar">
         <div class="header-bar-wrapper">
-            <h1>NoutCrypto</h1>
-            <nav>
+            <h1><router-link :to="{name: 'LandingPage'}">NoutCrypto</router-link></h1>
+            <nav class="nav-links" @click="disableNavigation">
                 <ul>
-                    <li>Accueil</li>
-                    <li>Fermes</li>
+                    <li><router-link :to="{name: 'LandingPage'}">Accueil</router-link></li>
+                    <li><router-link :to="{name: 'Farms'}">Fermes</router-link></li>
                     <li>Dashboard</li>
                 </ul>
             </nav>
             <button class="main-btn" @click="goToAuth">CONNEXION</button>
+            <div class="burger" @click="activeNavigation">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -19,6 +24,20 @@
         methods: {
             goToAuth() {
                 this.$router.push({name: 'Auth'})
+            },
+            activeNavigation() {
+                const nav = document.querySelector('.nav-links')
+                const burger = document.querySelector('.burger')
+
+                nav.classList.toggle('nav-active')
+                burger.classList.toggle('toggle')
+            },
+            disableNavigation() {
+                const nav = document.querySelector('.nav-links')
+                const burger = document.querySelector('.burger')
+
+                nav.classList.remove('nav-active')
+                burger.classList.remove('toggle')
             }
         },
     }
@@ -31,6 +50,7 @@
     background-color: #5688ff;
     left: 0;
     top: 0;
+    z-index: 4;
 }
 .header-bar-wrapper {
     height: 10vh;
@@ -57,6 +77,11 @@ ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
+
+    li:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 button {
@@ -65,5 +90,60 @@ button {
     font-weight: 800;
     background-color: white;
     padding: 10px 14px;
+}
+
+.burger {
+    display: none;
+    align-self: center;
+
+    div {
+        width: 28px;
+        height: 4px;
+        background: white;
+        margin: 6px;
+        transition: all 0.3s ease-out;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        top: 8vh;
+        height: 92vh;
+        width: 100vw;
+        background-color: #5688ff;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            li {
+                text-align: center;
+            }
+        }
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-active {
+        transform: translateX(0);
+    }
+    .toggle {
+        .line1 {
+            transform: rotate(-45deg) translate(-8px, 6px);
+        }
+        .line2 {
+            opacity: 0;
+        }
+        .line3 {
+            transform: rotate(45deg) translate(-8px, -6px);
+        }
+    }
 }
 </style>

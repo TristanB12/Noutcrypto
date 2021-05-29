@@ -61,7 +61,7 @@ import axios from 'axios'
                     })
                     .then(response => {
                         this.$store.dispatch('setUser', response.data.user)
-                        this.$router.push("test")
+                        this.$router.push({name: "Farms"})
                     })
                     .catch(error => this.login_error = error.response.data.error)
                 this.login_email_input = ""
@@ -75,6 +75,7 @@ import axios from 'axios'
                     })
                     .then(response => {
                         this.$store.dispatch('setUser', response.data.user)
+						this.$router.push({name: "Farms"})
                     })
                     .catch(error => this.sign_error = error.response.data.error)
                 this.sign_email_input = ""

@@ -3,31 +3,31 @@
         <div class="main-content-wrapper">
             <div class="main-content">
                 <div class="content">
-                    <h2>La Réunion a besoin de vous</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
-                    <button class="main-btn">VOIR PLUS</button>
+                    <h2>Participez à l'économie réunionnaise</h2>
+                    <p>La Réunion lance aujourd'hui sont projet de ferme de minage. <br> Grace à la plateforme NoutCrypto les citoyens Réunionais pourrons financer la construction de ferme sur l'île. Ces  fermes produiront la cryptomonnaie locale le DodoCoin. </p>
+                    <a  href="#secondary-content-wrapper"><button class="main-btn">VOIR PLUS</button></a>
                 </div>
                 <img src="@/assets/Image1LandingPage.png" alt="">
             </div>
         </div>
-        <div class="secondary-content-wrapper">
+        <div id="secondary-content-wrapper">
             <div class="secondary-content">
                 <img src="@/assets/PresentationCryptoLangingPage.png" alt="">
                 <div class="content">
                     <h3>QUOI</h3>
-                    <h2>Qu'est ce que la cryptomonnaie</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
-                    <button class="main-btn">VOIR PLUS</button>
+                    <h2>Qu'est ce que la cryptomonnaie ?</h2>
+                    <p>On désigne par cryptomonnaie à la fois une monnaie cryptographique et un système de paiement de pair à pair. Ces monnaies numériques sont donc des monnaies virtuelles dans le sens où ces dernières sont caractérisées par une absence de support physique : ni pièces, ni billets.</p>
+                    <p> Leur valeur n’est pas indexée sur le cours de l’or, ni régulées par un organe central ou des institutions financières. Et pourtant, sécurité et transparence sont leurs principaux atouts ! En effet la cryptographie sécurise les transactions qui sont toutes vérifiées et enregistrées dans un domaine public, assurant tout à la fois confidentialité et authenticité grâce à la technologie Blockchain. </p>
+                    <a  href="#last-content-wrapper"><button class="main-btn">VOIR PLUS</button></a>
                 </div>
             </div>
         </div>
-        <div class="last-content-wrapper">
+        <div id="last-content-wrapper">
             <div class="last-content">
                 <div class="content">
-                    <h3>QUOI</h3>
-                    <h2>Qu'est ce que la cryptomonnaie</h2>
+                    <h3>POURQUOI</h3>
+                    <h2>Pourquoi financer un projet de ferme de minage a la Réunion ? </h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum et expedita qui fugiat iusto animi voluptates optio iure reiciendis! Rerum atque quibusdam tenetur veritatis animi dignissimos quasi quis nostrum!</p>
-                    <button class="main-btn">VOIR PLUS</button>
                 </div>
                 <img src="@/assets/Image3LandingPage.png" alt="">
             </div>
@@ -37,13 +37,17 @@
 
 <script>
     export default {
-        
+
     }
 </script>
 
 <style lang="scss" scoped>
 #landingPage {
     font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-size: 1.4em;
 }
 
 .main-content-wrapper {
@@ -54,6 +58,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 20px black;
 }
 
 .main-content {
@@ -74,7 +79,7 @@
         button {
             padding: 13px 30px;
             font-weight: 900;
-            color: #5848D2;
+            background-color: #f7b731;
         }
     }
     img {
@@ -84,7 +89,7 @@
     }
 }
 
-.secondary-content-wrapper {
+#secondary-content-wrapper {
     height: 90vh;
     color: black;
     display: flex;
@@ -118,6 +123,10 @@
             color: black;
             margin-bottom: 50px;
             background-color: #f7b731;
+
+            a {
+                color: black;
+            }
         }
     }
     img {
@@ -127,7 +136,7 @@
     }
 }
 
-.last-content-wrapper {
+#last-content-wrapper {
     background: linear-gradient(#f1f3f6, #f1f3f6);
     border-radius: 300px 0px 0px 0px;
     height: 90vh;
@@ -135,6 +144,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 15px grey;
 }
 
 .last-content {
@@ -168,6 +178,36 @@
     img {
         width: 100%;
         max-width: 700px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #landingPage {
+        margin-top: 10vh;
+    }
+    img {
+        display: none;
+    }
+    h2 {
+        font-size: 2em !important;
+    }
+    h3 {
+        display: none;
+    }
+    .main-content .content {
+        width: 100%;
+    }
+    .secondary-content .content {
+        width: 100%;
+    }
+    .last-content .content {
+        width: 100%;
+    }
+    #secondary-content-wrapper {
+        height: auto;
+    }
+    #last-content-wrapper {
         height: auto;
     }
 }

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LandingPage from '../views/LandingPage.vue'
+import store from "@/store";
 
 Vue.use(VueRouter)
 
@@ -23,7 +24,8 @@ const routes = [
   {
     path: '/farm-details',
     name: 'FarmDetails',
-    component: () => import(/* webpackChunkName: "FarmDetails" */ '../views/FarmDetails.vue')
+    component: () => import(/* webpackChunkName: "FarmDetails" */ '../views/FarmDetails.vue'),
+    meta: {requiresAuth: true}
   },
   {
     path: ''
@@ -34,6 +36,20 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to,from, next) => {
+  if(to.matched.some(record => record.meta.requiresAuth)) {
+    if(!store.state.user) {
+      next({name: 'Auth'})
+    }
+    else {
+      next()
+    }
+  }
+  else {
+    next()
+  }
 })
 
 export default router

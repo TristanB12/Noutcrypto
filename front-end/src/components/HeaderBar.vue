@@ -9,7 +9,8 @@
                     <li>Dashboard</li>
                 </ul>
             </nav>
-            <button class="main-btn" @click="goToAuth">CONNEXION</button>
+            <button v-if="!$store.state.user" class="main-btn" @click="goToAuth">CONNEXION</button>
+            <button v-else class="main-btn"> {{ $store.state.user.name }} </button>
             <div class="burger" @click="activeNavigation">
                 <div class="line1"></div>
                 <div class="line2"></div>

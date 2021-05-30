@@ -2,23 +2,23 @@
     <div id="login">
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="">
+                <div class="form">
                     <h1>Créer un compte</h1>
                     <input type="text" placeholder="Nom" v-model="sign_name_input" />
                     <input type="email" placeholder="Email"  v-model="sign_email_input"/>
                     <input type="password" placeholder="Mot de passe" v-model="sign_password_input" />
                     <span v-if="sign_error != ''"> {{ sign_error }} </span>
                     <button @click="signUp">Créer</button>
-                </form>
+                </div>
             </div>
             <div class="form-container sign-in-container">
-                <form action="">
+                <div class="form">
                     <h1>Se connecter</h1>
                     <input type="email" placeholder="Email" v-model="login_email_input"/>
                     <input type="password" placeholder="Mot de passe" v-model="login_password_input"/>
                     <span v-if="login_error != ''"> {{ login_error }} </span>
                     <button @click="login">Connexion</button>
-                </form>
+                </div>
             </div>
             <div class="overlay-container">
                 <div class="overlay">
@@ -60,7 +60,7 @@ import axios from 'axios'
                         password: this.login_password_input
                     })
                     .then(response => {
-                        this.$store.dispatch('setUser', response.data.user)
+                        this.$store.dispatch('setUser', response.data)
                         this.$router.push({name: "Farms"})
                     })
                     .catch(error => this.login_error = error.response.data.error)
@@ -170,7 +170,7 @@ button.ghost {
 	border-color: #FFFFFF;
 }
 
-form {
+.form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;

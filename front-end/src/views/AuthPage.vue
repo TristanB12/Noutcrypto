@@ -55,7 +55,7 @@ import axios from 'axios'
         },
         methods: {
             login() {
-                axios.post('/api/auth/login', {
+                axios.post('http://localhost:8081/api/auth/login', {
                         email: this.login_email_input,
                         password: this.login_password_input
                     })
@@ -68,7 +68,7 @@ import axios from 'axios'
                 this.login_password_input = ""
             },
             signUp() {
-                axios.post('/api/auth/signup', {
+                axios.post('http://localhost:8081/api/auth/signup', {
                         name: this.sign_name_input,
                         email: this.sign_email_input,
                         password: this.sign_password_input

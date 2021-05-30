@@ -30,8 +30,4 @@ const farmRoutes = require('./routes/cryptoFarm')
 app.use('/api/auth', userRoutes)
 app.use('/api/farm', farmRoutes)
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(__dirname + '/public/'))
-    app.get(/.*/, (req, res) =>res.sendFile(__dirname + '/public/index.html'))
-}
 module.exports = app;

@@ -152,8 +152,12 @@ button {
         }
     }
     .progress-container {
+        width: 80%;
         left: 15px;
-        top: 225px;
+        top: 175px;
+    }
+    .progress-text {
+        font-size: .8em;
     }
     button {
         right: 10px;

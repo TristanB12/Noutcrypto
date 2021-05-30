@@ -9,8 +9,7 @@
         <FarmPreview :key="farm._id" v-for="farm in farms" :data="farm" />
         <div id="popup" v-if="!$store.state.popupDone">
             <div class="popup-wrap">
-				<img src="https://assets.codepen.io/1462889/sl3.jpg" alt="">
-                <p>Participez à la création de la ferme de Sainte-Suzanne et gagnez une session de canoë !</p>
+				<img src="@/assets/popup.png" alt="">
                 <div class="actions">
                     <a href="#ferme_sainte_suzanne.jpg" @click="closePopup"><button class="contribute main-btn">contribuer</button></a>
                     <button class="close main-btn" @click="closePopup">fermer</button>
@@ -34,7 +33,7 @@ import axios from 'axios'
         },
         methods: {
             getFarms() {
-                axios.get('http://noutcrypto.com//api/farm/')
+                axios.get('http://localhost:8081/api/farm/')
                     .then(response => this.farms = response.data)
                     .catch(err => console.log(err))
             },
@@ -84,13 +83,13 @@ h1 {
 }
 
 #popup {
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
     position: fixed;
     top: 5vh;
-    left: 5vw;
+    left: 15vw;
     border-radius: 10px;
-    background-color: white;
+    background: linear-gradient(#f7b731, #fd9644);
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -100,8 +99,9 @@ h1 {
         width: 600px;
     }
     button {
-        font-size: 15px;
-        padding: 10px 10px;
+        font-size: 17px;
+        font-weight: 800;
+        padding: 17px 20px;
         color: white;
     }
     .close {

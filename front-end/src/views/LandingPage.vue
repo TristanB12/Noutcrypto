@@ -4,8 +4,8 @@
             <div class="main-content">
                 <div class="content">
                     <h2>Participez à l'économie réunionnaise</h2>
-                    <p>La Réunion lance aujourd'hui son projet de ferme de minage. <br> Grâce à la plateforme NoutCrypto les citoyens Réunionais pourront financer la construction de fermes sur l'île. Ces  fermes produiront la cryptomonnaie locale le DodoCoin. </p>
-                    <a  href="#secondary-content-wrapper"><button class="main-btn">VOIR PLUS</button></a>
+                    <p>La Réunion lance aujourd'hui son projet de fermes de minage de cryptomonnaie Dodocoin.</p>
+                    <a  href="#secondary-content-wrapper"><button class="main-btn">EN SAVOIR PLUS</button></a>
                 </div>
                 <img src="@/assets/Image1LandingPage.png" alt="">
             </div>
@@ -14,23 +14,22 @@
             <div class="secondary-content">
                 <img src="@/assets/PresentationCryptoLangingPage.png" alt="">
                 <div class="content">
-                    <h3>QUOI</h3>
                     <h2>Qu'est ce que la cryptomonnaie ?</h2>
-                    <p>On désigne par cryptomonnaie à la fois une monnaie cryptographique et un système de paiement de pair à pair. Ces monnaies numériques sont donc des monnaies virtuelles dans le sens où ces dernières sont caractérisées par une absence de support physique : ni pièces, ni billets.</p>
-                    <p> Leur valeur n’est pas indexée sur le cours de l’or, ni régulées par un organe central ou des institutions financières. Et pourtant, sécurité et transparence sont leurs principaux atouts ! En effet la cryptographie sécurise les transactions qui sont toutes vérifiées et enregistrées dans un domaine public, assurant tout à la fois confidentialité et authenticité grâce à la technologie Blockchain. </p>
-                    <a  href="#last-content-wrapper"><button class="main-btn">VOIR PLUS</button></a>
+                    <p>La cryptomonnaie est une monnaie virtuelle dans le sens d'une absence de support physique : pas de pièces, ni de billets.</p>
+                    <p>Leurs valeur n'est pas régulée par des institutions financières, et pourtant, sécurité et transparence sont leurs principaux atouts !</p>
+                    <p>La cryptographie sécurise les transactions qui sont toutes vérifiées et enregistrées dans un domaine public, assurant tout à la fois confidentialité et authenticité grâce à la technologie Blockchain. </p>
+                    <a  href="#last-content-wrapper"><button class="main-btn">EN SAVOIR PLUS</button></a>
                 </div>
             </div>
         </div>
         <div id="last-content-wrapper">
             <div class="last-content">
                 <div class="content">
-                    <h3>POURQUOI</h3>
                     <h2>Pourquoi financer un projet de ferme de minage a la Réunion ? </h2>
-                    <p>En Finançant la construction de ferme de minage, vous permettez à l'économie réunionnaise de grandir. La Réunion possède aujourd'hui également sa cryptomonnais qui se nomme le "Dodo Coin", elle vaut aux alentours de 1,30$ (varie selon le cours).</p>
-                    <p>La crise sanitaire fait chuter toute les plus grandes monnaies du monde. Seuls le dollar américain persiste mais risque fortement de s'éteindre, d'où l'intérêt d'implanter des fermes de minage à la Réunion pour produire du DodoCoin et concurrencer les autres cryptomonnais du monde tout en développement l'économie Réunionnaise.</p>
-
-                    <p>En finançant un projet, une fois celui-ci terminé les premiers DodoCoin engendrés par la fermes vous seront reversé selon l'importance de votre donnation. Vous ne pouvez pas financer un projet au dela de 10% de l'objectif.</p>
+                    <p>Le contexte sanitaire ayant fait chuter toute les plus grandes monnaies du monde (à l'exception du dollar américain), l'intérêt d'implanter une monnaie propre à la Réunion prend tout son sens.</p>
+                    <p>En finançant la construction d'une ferme de minage, vous permettez à l'économie réunionnaise de grandir. En échange, nous vous renversons une partie des DodoCoins engendrés.</p>
+                    <p>Devenez dès aujourd'hui acteur de l'économie de demain, et parrainez vous aussi une ferme de minage à la Réunion !</p>
+                   <router-link :to="{name: 'Farms'}"><button class="main-btn">Financez une ferme</button></router-link>
                 </div>
                 <img src="@/assets/Image3LandingPage.png" alt="">
             </div>
@@ -50,7 +49,7 @@
 }
 
 p {
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 .main-content-wrapper {
@@ -72,12 +71,12 @@ p {
     align-items: center;
 
     .content {
-        width: 40%;
+        width: 70%;
         * {
             margin-bottom: 50px;
         }
         h2 {
-            font-size: 3em;
+            font-size: 2.5em;
         }
         button {
             padding: 13px 30px;

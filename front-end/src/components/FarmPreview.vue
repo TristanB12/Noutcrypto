@@ -1,8 +1,8 @@
 <template>
-    <div class="farm-container">
+    <div :id="data.imagePath" class="farm-container">
         <div class="farm">
             <div class="farm-preview">
-                <img src="@/assets/mafate.jpg" alt="">
+                <img :src="require('@/assets/' + data.imagePath)" alt="">
             </div>
             <div class="farm-info">
                 <h2> {{data.name}} </h2>
@@ -10,10 +10,10 @@
                 <div class="progress-container">
                     <div class="progress"><span class="funding" :id="data._id"></span></div>
                     <span class="progress-text">
-                        {{ data.funding }} / {{ data.fundingGoal }}
+                        {{ data.funding }} / {{ data.fundingGoal }}$
                     </span>
                 </div>
-                <button class="main-btn">Détails</button>
+                <router-link :to="{name: 'FarmDetails', params: {data: data}}"><button class="main-btn">Détails</button></router-link>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
 <style lang="scss" scoped>
 
 img {
-    width: 100px;
+    width: 300px;
 }
 
 
@@ -136,8 +136,28 @@ button {
 }
 
 @media screen and (max-width: 768px){
-.farm h2 {
-        font-size: 1em;
+    .farm-preview {
+        display: none;
     }
+    .farm-info {
+        width: 80%;
+    }
+    .farm {
+        h2 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        h6 {
+            font-size: .8em;
+        }
+    }
+    .progress-container {
+        left: 15px;
+        top: 225px;
+    }
+    button {
+        right: 10px;
+    }
+
 }
 </style>

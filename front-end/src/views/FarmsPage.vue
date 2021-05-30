@@ -1,7 +1,10 @@
 <template>
     <div id="farmsPage">
         <div class="wrapper">
-            <h1>Les différents projets de fermes de minage sur l'île</h1>
+            <div class="container">
+                <h1>Les différents projets de fermes de minage sur l'île</h1>
+                <img src="@/assets/CarteFermes.png" alt="">
+            </div>
         </div>
         <FarmPreview :key="farm._id" v-for="farm in farms" :data="farm" />
         <div id="popup" v-if="!$store.state.popupDone">
@@ -59,6 +62,16 @@ import axios from 'axios'
     align-items: center;
     box-shadow: 0px 0px 20px black;
     margin-bottom: 15vh;
+
+    img {
+        width: 900px;
+    }
+}
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
 #farmsPage {
     margin: auto;
@@ -107,6 +120,15 @@ h1 {
     #popup {
         padding: 5px;
         text-align: center;
+        img {
+            width: 300px;
+        }
+    }
+    .container {
+        flex-direction: column;
+        h1 {
+            font-size: 1.6em;
+        }
         img {
             width: 300px;
         }

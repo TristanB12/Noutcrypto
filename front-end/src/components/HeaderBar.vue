@@ -9,7 +9,7 @@
                 <ul>
                     <li><router-link :to="{name: 'LandingPage'}">Accueil</router-link></li>
                     <li><router-link :to="{name: 'Farms'}">Fermes</router-link></li>
-                    <li>Dashboard</li>
+                    <li></li>
                 </ul>
             </nav>
             <button v-if="!$store.state.user" class="main-btn" @click="goToAuth">CONNEXION</button>
@@ -156,6 +156,16 @@ button {
         .line3 {
             transform: rotate(45deg) translate(-8px, -6px);
         }
+    }
+    .logo {
+        width: 30px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+    button {
+        font-size: .5em;
     }
 }
 </style>

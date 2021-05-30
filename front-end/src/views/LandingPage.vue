@@ -4,7 +4,7 @@
             <div class="main-content">
                 <div class="content">
                     <h2>Participez à l'économie réunionnaise</h2>
-                    <p>La Réunion lance aujourd'hui sont projet de ferme de minage. <br> Grace à la plateforme NoutCrypto les citoyens Réunionais pourrons financer la construction de ferme sur l'île. Ces  fermes produiront la cryptomonnaie locale le DodoCoin. </p>
+                    <p>La Réunion lance aujourd'hui son projet de ferme de minage. <br> Grâce à la plateforme NoutCrypto les citoyens Réunionais pourront financer la construction de fermes sur l'île. Ces  fermes produiront la cryptomonnaie locale le DodoCoin. </p>
                     <a  href="#secondary-content-wrapper"><button class="main-btn">VOIR PLUS</button></a>
                 </div>
                 <img src="@/assets/Image1LandingPage.png" alt="">

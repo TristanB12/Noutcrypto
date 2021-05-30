@@ -1,7 +1,10 @@
 <template>
     <div id="headerBar">
         <div class="header-bar-wrapper">
-            <h1><router-link :to="{name: 'LandingPage'}">NoutCrypto</router-link></h1>
+            <div class="logo-container">
+                <img src="@/assets/logo.png" class="logo" alt="">
+                <h1><router-link :to="{name: 'LandingPage'}">NoutCrypto</router-link></h1>
+            </div>
             <nav class="nav-links" @click="disableNavigation">
                 <ul>
                     <li><router-link :to="{name: 'LandingPage'}">Accueil</router-link></li>
@@ -46,6 +49,13 @@
 </script>
 
 <style lang="scss" scoped>
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 50px;
+}
 #headerBar {
     width: 100%;
     position: fixed;

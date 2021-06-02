@@ -53,7 +53,7 @@ import axios from 'axios'
             },
             putFarm() {
                 this.data.funding += parseInt(this.number_input, 10)
-                axios.put('http://localhost:8081/api/farm/' + this.data._id, {
+                axios.put(process.env.VUE_APP_API_ENDPOINT + '/api/farm/' + this.data._id, {
                     ...this.data
                 }).then(res => console.log(res))
                 .catch(err => console.log(err))

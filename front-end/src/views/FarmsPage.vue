@@ -33,7 +33,7 @@ import axios from 'axios'
         },
         methods: {
             getFarms() {
-                axios.get('http://localhost:8081/api/farm/')
+                axios.get(process.env.VUE_APP_API_ENDPOINT + '/api/farm/')
                     .then(response => this.farms = response.data)
                     .catch(err => console.log(err))
             },

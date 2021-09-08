@@ -1,23 +1,5 @@
 # WEBCUP2021
 
-start back-end: 
+Source code of https://noutcrypto.com/
 
-`cd back-end`
-
-`npm install`
-
-`npm run start`
-
-Server starts on http://localhost:8081
-
-
-start-front-end:
-
-`cd front-end`
-
-`npm install`
-
-`npm run serve`
-
-
-http://localhost8080/
+Project created in 24h during the [Webcup](https://www.webcup.fr/) event.

@@ -1,4 +1,4 @@
-# WEBCUP2021
+# Noutcrypto
 
 Source code of https://noutcrypto.com/
 
